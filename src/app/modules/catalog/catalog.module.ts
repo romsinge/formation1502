@@ -1,3 +1,4 @@
+import { ProductDetailsComponent } from './../../components/product-details/product-details.component';
 import { AppCommonModule } from '../app-common/app-common.module';
 import { SearchPipe } from './../../pipes/search.pipe';
 import { SortByPipe } from './../../pipes/sort-by.pipe';
@@ -19,7 +20,8 @@ import { CatalogRoutingModule } from './catalog-routing.module';
     AddToCartDirective,
     CountKeyLessThanPipe,
     SortByPipe,
-    SearchPipe
+    SearchPipe,
+    ProductDetailsComponent
   ],
   imports: [
     CommonModule,
