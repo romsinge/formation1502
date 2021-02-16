@@ -1,3 +1,4 @@
-<p>
-  cart works!
-</p>
+<app-product
+  *ngFor="let item of cartProducts$ | async"
+  [product]="item"
+></app-product>

@@ -1,4 +1,4 @@
-import { flatMap, map } from 'rxjs/operators';
+import { flatMap, map, mergeMap } from 'rxjs/operators';
 import { DataService } from './../../services/data.service';
 import { Product } from './../../models/product.model';
 import { Component, OnInit } from '@angular/core';
@@ -17,7 +17,7 @@ export class ProductDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private dataS: DataService) { }
 
   ngOnInit() {
-    this.product$ = this.route.params.pipe(flatMap(params => {
+    this.product$ = this.route.params.pipe(mergeMap(params => {
       return this.dataS.getProductById(params.id)
     }))
   }

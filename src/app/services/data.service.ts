@@ -20,6 +20,10 @@ export class DataService {
     return this.http.get<Product[]>('http://localhost:3000/products')
   }
 
+  get cartProducts$(): Observable<Product[]> {
+    return this.http.get<Product[]>('http://localhost:3000/cart')
+  }
+
   getProductById(id: number): Observable<Product> {
     return this.products$.pipe(map(products => {
       return products.find(product => product.id == id)

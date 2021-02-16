@@ -15,7 +15,6 @@ import { CatalogRoutingModule } from './catalog-routing.module';
 @NgModule({
   declarations: [
     CatalogComponent,
-    ProductComponent,
     PriceHilightDirective,
     AddToCartDirective,
     CountKeyLessThanPipe,

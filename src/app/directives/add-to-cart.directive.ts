@@ -1,16 +1,21 @@
 import { Product } from './../models/product.model';
 import { Directive, HostListener } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Directive({
   selector: '[appAddToCart]'
 })
 export class AddToCartDirective {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   @HostListener('addToCartClick', ['$event'])
   addToCart(product: Product) {
-    console.log('ADD TO CART : ', product.title)
+    this.http.post('http://localhost:3000/cart', product).subscribe({
+      next: () => {
+        console.log(`ADDED : ${product.title}`)
+      }
+    })
   }
 
 }

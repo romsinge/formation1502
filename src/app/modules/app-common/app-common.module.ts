@@ -1,16 +1,24 @@
+import { RouterModule } from '@angular/router';
+import { ProductComponent } from './../../components/product/product.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ProductComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatButtonModule,
+    MatCardModule,
+    RouterModule
   ],
   exports: [
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    ProductComponent
   ]
 })
 export class AppCommonModule { }
