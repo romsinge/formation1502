@@ -1,6 +1,7 @@
 import { DataService } from './services/data.service';
 import { Product } from './models/product.model';
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -16,10 +17,10 @@ export class AppComponent {
     this.searchString = event.target.value
   }
 
-  products: Product[] = []
+  products$: Observable<Product[]>
 
   ngOnInit() {
-    this.products = this.dataS.products
+    this.products$ = this.dataS.products$
   }
 
   constructor(private dataS: DataService) {}

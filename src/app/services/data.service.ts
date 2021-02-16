@@ -1,13 +1,18 @@
 import { Product } from './../models/product.model';
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  get products(): Product[] {
-    return this._products
+  get products$(): Observable<Product[]> {
+    // return new Observable((observer) => {
+    //   observer.next(this._products)
+    // })
+
+    return of(this._products)
   }
 
   constructor() { }

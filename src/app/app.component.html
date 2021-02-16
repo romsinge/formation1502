@@ -1,18 +1,18 @@
 <h1>Bonjour {{ title }}</h1>
 
-<h3>Produits à -50EUR : {{ products | countKeyLessThan:'price':60 }}</h3>
+<h3>Produits à -50EUR : {{ products$ | async | countKeyLessThan:'price':60 }}</h3>
 
 <input type="text" (keydown)="handleSearchChange($event)">
 
 <br>
 
 <app-product
-  *ngFor="let item of products | search:'title':searchString | sortBy:'price'"
+  *ngFor="let item of products$ | async | search:'title':searchString | sortBy:'price'"
   [product]="item"
   [appPriceHilight]="{ low: 'green', high: 'gold' }"
   appAddToCart
 ></app-product>
 
 <pre>
-  {{ products | json }}
+  {{ products$ | async | json }}
 </pre>
