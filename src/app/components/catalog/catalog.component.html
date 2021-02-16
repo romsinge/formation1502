@@ -1,4 +1,4 @@
-<h3>Produits à -50EUR : {{ products$ | async | countKeyLessThan:'price':60 }}</h3>
+<h3>Produits à -50EUR : {{ products$ | async | countKeyLessThan:'price':50 }}</h3>
 
 <input type="text" (keydown)="handleSearchChange($event)">
 
@@ -10,7 +10,3 @@
   [appPriceHilight]="{ low: 'green', high: 'gold' }"
   appAddToCart
 ></app-product>
-
-<pre>
-  {{ products$ | async | json }}
-</pre>

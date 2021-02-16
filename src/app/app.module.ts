@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     BrowserModule,
     BrowserAnimationsModule,
     AppCommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
