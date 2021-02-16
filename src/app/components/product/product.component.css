@@ -1,0 +1,15 @@
+:host {
+  display: inline-block;
+  vertical-align: top;
+}
+
+mat-card {
+  width: 300px;
+}
+
+img {
+  width: auto;
+  height: 150px;
+  display: block;
+  margin: auto;
+}

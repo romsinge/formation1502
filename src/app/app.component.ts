@@ -1,3 +1,5 @@
+import { DataService } from './services/data.service';
+import { Product } from './models/product.model';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'formation1120';
+  title = 'AMBIENT IT';
+
+  searchString: string = ''
+
+  handleSearchChange(event: any) {
+    this.searchString = event.target.value
+  }
+
+  products: Product[] = []
+
+  ngOnInit() {
+    this.products = this.dataS.products
+  }
+
+  constructor(private dataS: DataService) {}
 }
