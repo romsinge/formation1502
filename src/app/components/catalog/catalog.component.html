@@ -1,4 +1,5 @@
-<h3>Produits à -50EUR : {{ products$ | async | countKeyLessThan:'price':50 }}</h3>
+<h3>Produits à -{{ priceRange }}EUR : {{ products$ | async | countKeyLessThan:'price':priceRange }}</h3>
+<input type="range" min="10" max="1000" step="1" [value]="priceRange" (change)="priceRange = $event.target.value">
 
 <input type="text" (keydown)="handleSearchChange($event)">
 

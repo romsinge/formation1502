@@ -1,5 +1,6 @@
 import { Product } from './../../models/product.model';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-product',
@@ -10,6 +11,7 @@ export class ProductComponent implements OnInit {
 
   @Input() product: Product
   @Output() addToCartClick: EventEmitter<Product> = new EventEmitter()
+  isCart: boolean = false
 
   handleImgClick(): void {
     console.log(this.product.title)
@@ -19,10 +21,10 @@ export class ProductComponent implements OnInit {
     this.addToCartClick.emit(this.product)
   }
   
-  constructor() {}
+  constructor(private location: Location) {}
 
   ngOnInit() {
-    
+    this.isCart = this.location.isCurrentPathEqualTo('/cart')
   }
 
 }

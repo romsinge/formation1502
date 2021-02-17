@@ -2,6 +2,7 @@ import { DataService } from './../../services/data.service';
 import { Product } from './../../models/product.model';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-cart',

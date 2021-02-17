@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 export class CatalogComponent implements OnInit {
 
   searchString: string = ''
+  priceRange: number = 50
 
   handleSearchChange(event: any) {
     this.searchString = event.target.value

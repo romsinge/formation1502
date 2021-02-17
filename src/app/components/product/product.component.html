@@ -10,7 +10,7 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button (click)="handleAddToCartClick()" mat-raised-button>ADD TO CART</button>
+    <button *ngIf="!isCart" (click)="handleAddToCartClick()" mat-raised-button>ADD TO CART</button>
     <button [routerLink]="['product', product.id]" mat-raised-button>DETAILS</button>
   </mat-card-actions>
 </mat-card>
