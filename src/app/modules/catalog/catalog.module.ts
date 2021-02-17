@@ -1,4 +1,4 @@
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateProductComponent } from './../../components/create-product/create-product.component';
 import { ProductDetailsComponent } from './../../components/product-details/product-details.component';
 import { AppCommonModule } from '../app-common/app-common.module';
@@ -29,7 +29,8 @@ import { CatalogRoutingModule } from './catalog-routing.module';
     CommonModule,
     CatalogRoutingModule,
     AppCommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class CatalogModule { }

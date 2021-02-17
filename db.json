@@ -55,6 +55,14 @@
       "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
       "category": "electronics",
       "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg"
+    },
+    {
+      "title": "GUCCI BAG",
+      "description": "Un tres beau sac",
+      "price": 3000,
+      "category": "sac",
+      "image": "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1519814706/523153_96IWG_8745_004_100_0000_Light-Portefeuille-Continental-Ophidia-GG.jpg",
+      "id": 21
     }
   ],
   "products": [
@@ -217,6 +225,22 @@
       "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
       "category": "women clothing",
       "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
+    },
+    {
+      "title": "GUCCI BAG",
+      "description": "Un tres beau sac",
+      "price": 3000,
+      "category": "sac",
+      "image": "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1519814706/523153_96IWG_8745_004_100_0000_Light-Portefeuille-Continental-Ophidia-GG.jpg",
+      "id": 21
+    },
+    {
+      "title": "Mocassins",
+      "description": "Cuir de mouton",
+      "price": 520,
+      "category": "shoes",
+      "image": "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1600963209/648039_1XH30_1094_006_100_0000_Light-Mocassins-avec-bande-Web-et-dtailGG-pour-homme.jpg",
+      "id": 22
     }
   ]
 }

@@ -30,6 +30,10 @@ export class DataService {
     }))
   }
 
+  saveProduct(product: Product): Observable<Product> {
+    return this.http.post<Product>('http://localhost:3000/products', product)
+  }
+
   constructor(private http: HttpClient) { }
 
   private _products: Product[] = []

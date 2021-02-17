@@ -1,21 +1,34 @@
-<form>
-  
+<form [formGroup]="productFormGroup" (submit)="handleSubmit()">
   Title : 
-  <input type="text">
+  <input type="text" formControlName="title">
+  <div *ngFor="let item of productFormGroup.controls.title.errors | keyvalue">
+    {{ errorMessages[item.key] }}
+  </div>
   <br>
   Price : 
-  <input type="number">
+  <input type="number" formControlName="price">
+  <div *ngFor="let item of productFormGroup.controls.price.errors | keyvalue">
+    {{ errorMessages[item.key] }}
+  </div>
   <br>
   Description : 
-  <input type="text">
+  <input type="text" formControlName="description">
+  <div *ngFor="let item of productFormGroup.controls.description.errors | keyvalue">
+    {{ errorMessages[item.key] }}
+  </div>
   <br>
   Category : 
-  <input type="text">
+  <input type="text" formControlName="category">
+  <div *ngFor="let item of productFormGroup.controls.category.errors | keyvalue">
+    {{ errorMessages[item.key] }}
+  </div>
   <br>
   Image : 
-  <input type="text">
+  <input type="text" formControlName="image">
+  <div *ngFor="let item of productFormGroup.controls.image.errors | keyvalue">
+    {{ errorMessages[item.key] }}
+  </div>
   <br>
-
-  <button type="submit">CREATE</button>
+  <button type="submit" [disabled]="productFormGroup.invalid">CREATE</button>
 
 </form>
