@@ -1,3 +1,4 @@
+import { FormExitGuard } from './../../guards/form-exit.guard';
 import { CreateProductComponent } from './../../components/create-product/create-product.component';
 import { ProductDetailsComponent } from './../../components/product-details/product-details.component';
 import { CatalogComponent } from './../../components/catalog/catalog.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   },
   {
     path: 'create',
-    component: CreateProductComponent
+    component: CreateProductComponent,
+    canDeactivate: [ FormExitGuard ]
   }
 ];
 

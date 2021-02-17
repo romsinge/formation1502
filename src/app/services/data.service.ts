@@ -40,6 +40,12 @@ export class DataService {
     }))
   }
 
+  checkPassword(password: string): Observable<boolean> {
+    return this.http.get('http://localhost:3000/users/0').pipe(map((user: any) => {
+      return user.password == password
+    }))
+  }
+
   constructor(private http: HttpClient) { }
 
   private _products: Product[] = []
