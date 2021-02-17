@@ -1,3 +1,4 @@
+import { PasswordGuard } from './guards/password.guard';
 import { LoginComponent } from './components/login/login.component';
 import { Route, RouterModule } from "@angular/router";
 import { NgModule } from '@angular/core';
@@ -13,7 +14,8 @@ const APP_ROUTES: Route[] = [
   },
   {
     path: 'cart',
-    loadChildren: () => import('./modules/cart/cart.module').then(m => m.CartModule)
+    loadChildren: () => import('./modules/cart/cart.module').then(m => m.CartModule),
+    canActivate: [ PasswordGuard ]
   },
   {
     path: '**',
