@@ -34,6 +34,12 @@ export class DataService {
     return this.http.post<Product>('http://localhost:3000/products', product)
   }
 
+  isTitleAvailable(title: string): Observable<boolean> {
+    return this.http.get(`http://localhost:3000/products?title=${title}`).pipe(map((products: any[]) => {
+      return !products.length
+    }))
+  }
+
   constructor(private http: HttpClient) { }
 
   private _products: Product[] = []
