@@ -1,0 +1,28 @@
+<form (submit)="handleSubmit()" #loginForm="ngForm">
+
+  Username :
+  <input
+    type="text"
+    name="username"
+    [ngModel]="username"
+    (ngModelChange)="username = $event"
+    required
+    #usernameInput="ngModel"
+  >
+  <span class="error-message" *ngIf="usernameInput.hasError('required') && usernameInput.touched">Field required</span>
+  <br>
+
+  Password :
+  <input
+    type="password"
+    name="password"
+    [(ngModel)]="password"
+    required
+    #passwordInput="ngModel"
+  >
+  <span class="error-message" *ngIf="passwordInput.hasError('required') && passwordInput.touched">Field required</span>
+  <br>
+
+  <button type="submit" [disabled]="loginForm.invalid">LOGIN</button>
+
+</form>

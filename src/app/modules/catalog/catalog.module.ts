@@ -1,3 +1,5 @@
+import { FormsModule } from '@angular/forms';
+import { CreateProductComponent } from './../../components/create-product/create-product.component';
 import { ProductDetailsComponent } from './../../components/product-details/product-details.component';
 import { AppCommonModule } from '../app-common/app-common.module';
 import { SearchPipe } from './../../pipes/search.pipe';
@@ -20,12 +22,14 @@ import { CatalogRoutingModule } from './catalog-routing.module';
     CountKeyLessThanPipe,
     SortByPipe,
     SearchPipe,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CreateProductComponent
   ],
   imports: [
     CommonModule,
     CatalogRoutingModule,
-    AppCommonModule
+    AppCommonModule,
+    FormsModule
   ]
 })
 export class CatalogModule { }

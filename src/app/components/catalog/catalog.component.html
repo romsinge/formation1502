@@ -1,7 +1,9 @@
 <h3>Produits à -{{ priceRange }}EUR : {{ products$ | async | countKeyLessThan:'price':priceRange }}</h3>
-<input type="range" min="10" max="1000" step="1" [value]="priceRange" (change)="priceRange = $event.target.value">
+<!-- <input type="range" min="10" max="1000" step="1" [value]="priceRange" (change)="priceRange = $event.target.value"> -->
 
-<input type="text" (keydown)="handleSearchChange($event)">
+<input type="range" min="10" max="1000" step="1" [(ngModel)]="priceRange">
+
+<input type="text" [(ngModel)]="searchString">
 
 <br>
 
